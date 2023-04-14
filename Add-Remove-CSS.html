@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Add-CSS </title>
+    <style>
+        .xyz {
+            height: 400px;
+            width: 400px;
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="para"></p>
+
+    <button onclick="show()">show</button>
+    <button onclick="hide()">Hide</button>
+    <button onclick="addremove()">Show/Hide</button>
+
+
+    <script>
+        p_tag = document.getElementById('para')
+
+        console.log(p_tag);
+
+        function show() {
+            p_tag.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quaerat vel libero obcaecati, non labore maxime repellendus et dicta, itaque voluptatibus nostrum totam veniam facere aspernatur quas placeat mollitia praesentium!'
+            p_tag.classList.add('xyz')
+        }
+
+        function hide() {
+            p_tag.classList.remove('xyz')
+        }
+
+        function addremove() {
+            p_tag.classList.toggle('xyz')
+        }
+    </script>
+</body>
+
+</html>
